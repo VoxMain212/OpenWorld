@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    
+<div class="page-header">
+    <h1>Новая статья</h1>
+    <p>Поделитесь знаниями с миром. Ваша статья может изменить чью-то жизнь.</p>
+</div>
+
+
+<form class="article-form" method="POST" action="#">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="title">Заголовок статьи *</label>
+        <input type="text" id="title" name="title" placeholder="Введите заголовок статьи" required>
+    </div>
+    <div class="form-group">
+        <label for="image_url">Заголовок статьи *</label>
+        <input type="text" id="image_url" name="image_url" placeholder="Введите URL картинки" required>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Категория *</label>
+        <select id="category" name="category" required>
+            <option value="" disabled selected>Выберите категорию</option>
+            <option value="science">Наука</option>
+            <option value="history">История</option>
+            <option value="culture">Культура</option>
+            <option value="technology">Технологии</option>
+            <option value="nature">Природа</option>
+            <option value="philosophy">Философия</option>
+            <option value="art">Искусство</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="tags">Теги (через запятую)</label>
+        <input type="text" id="tags" name="tags" placeholder="например: физика, пространство, время">
+    </div>
+
+    <div class="form-group">
+        <label for="content">Содержание статьи *</label>
+        <textarea id="content" name="content" rows="15" placeholder="Начните писать здесь..." required></textarea>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-save">💾 Сохранить</button>
+        <a href="#" class="btn btn-cancel">❌ Отмена</a>
+    </div>
+</form>
+
+<form class="article-form" method="POST" action="#" style="margin-top: 30px; margin-bottom: 30px;" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="file">Загрузка через JSON</label>
+        <input type="file" id="file" name="file">
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-save">💾 Сохранить</button>
+    </div>
+</form>
+
+</main>
+{% endblock %}

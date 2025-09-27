@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+        <div class="container">
+            <h2>Добро пожаловать в OpenWorld</h2>
+            <p>Самая полная онлайн-энциклопедия, созданная сообществом для сообщества. Исследуйте знания, делитесь открытиями, расширяйте горизонты.</p>
+            <a href="{% url 'articles' %}" class="btn">Начать изучение</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Почему выбирают OpenWorld?</h2>
+        <div class="features">
+            <div class="card">
+                <h3>📚 Более 100 000 статей</h3>
+                <p>Охватываем все темы — от науки до культуры, от технологий до истории.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Мультиязычность</h3>
+                <p>Доступно на 20+ языках. Читайте и пишите на родном языке.</p>
+            </div>
+            <div class="card">
+                <h3>✍️ Участвуйте сами</h3>
+                <p>Любой может редактировать, добавлять и улучшать статьи. Знания — для всех!</p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
