@@ -588,3 +588,26 @@ footer {
     max-width: 100%;
     box-sizing: border-box;
 }
+
+.search-filters {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.search-filters label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.search-filters input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
